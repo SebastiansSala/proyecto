@@ -1,0 +1,115 @@
+.container{
+    color: gray;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        'aside header'
+        'aside main';
+}
+.header { 
+    background-color: #fafaf9;
+    grid-area: header;
+    padding: 1.5rem 3rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    z-index: 3;
+}
+.logo { 
+    grid-area: logo;
+    height: 10vh;
+}
+
+.grid-container > .logo > img{
+    width: 100px;
+}
+.aside { 
+    background-color: #084c61;
+    color: white;
+    padding: 2rem;
+    grid-area: aside;
+}
+
+.aside-nav{
+    font-size: 1.2rem;
+    margin-top: 3.25rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.aside h1{
+    font-size: 40px;
+}
+
+.link{
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+
+.aside-nav_elem:hover{
+    font-weight: 900;
+    cursor:pointer;
+}
+
+.aside-nav_elem{
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.main { 
+    background-color: #e7e5e4;
+    grid-area: main;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: min-content 1fr;
+    gap: 2rem;
+    grid-template-areas: 'reservation cliente';
+    overflow: auto;
+}
+
+.reservations{
+    grid-area: reservation;
+}
+
+.cards-reservation{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 2rem;
+}
+
+.reservations .card{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    background-color: #fafaf9;
+    padding: 2rem;
+    border-radius: 0.5rem;  
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); 
+}
+
+
+.cliente{
+    grid-area: cliente;
+}
+
+.cliente .card{
+    height: 185px;
+    padding: 1.5rem;
+}
+
+.cliente h1{
+    font-size: 25px;
+}
+
+.cards-cliente{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    overflow: hidden;
+    gap: 2rem;
+}
