@@ -1,0 +1,14 @@
+<h1>Iniciar sesión</h1>
+<div>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username">
+  </div>
+  
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password">
+  </div>
+<div class="buttons">
+  <button mat-raised-button (click)="login()">Iniciar Sesión</button>
+  <button mat-raised-button (click)="cancel()">Cancelar</button>
+</div>

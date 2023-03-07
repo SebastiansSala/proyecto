@@ -15,7 +15,7 @@
             <h1><i class="fa fa-dashboard" style="font-size: 65px"></i> Dashboard</h1>
             <ul class="aside-nav">
                 <li class="aside-nav_elem">
-                    <a class="link">
+                    <a class="link" routerLink="/index" routerLinkActive="active">
                         <span class="material-symbols-outlined" style="font-size: 40px;">home</span>Home
                     </a>
                 </li>
@@ -30,43 +30,40 @@
                     </a>
                 </li>
             </ul>
-            <ul class="aside-nav">
-                <li class="aside-nav_elem"></li>
-                <li class="aside-nav_elem"></li>
-                <li class="aside-nav_elem"></li>
-            </ul>
         </aside>
         <main class="main">
-            <div class="reservations">
-                <div class="cards-reservation">
-                    <div class="card">
-                        <h1>Super Cool</h1>
-                        <p>hola</p>
-                    </div>
-                    <div class="card">
-                        <h1>Super Cool</h1>
-                        <p>hola</p>
-                    </div>
-                    <div class="card">
-                        <h1>Super Cool</h1>
-                        <p>hola</p>
-                    </div>
-                    <div class="card">
-                        <h1>Super Cool</h1>
-                        <p>hola</p>
+            <div class="dates">
+                <div class="head-dates">
+                    <h2>Dia</h2>
+                    <button> {{fechaActual.dia}}/{{fechaActual.mes}}/{{fechaActual.anno}}</button>
+                </div>
+                <div class='dates-card'>
+                    <div class="days" *ngFor="let dia of dias" [class.seleccionado]="dia.seleccionado" (click)="seleccionarDia(dia)">
+                        <p class="day">{{dia.dia}}</p>
+                        <p class="date">{{dia.numero}}</p>
                     </div>
                 </div>
             </div>
-            <div class="cliente">
-                <div class="cards-cliente">
-                    <div class="card"><h1>Manuel Sebastian Sala Alanis</h1></div>
-                    <div class="card"><h1>Manuel Sebastian Sala Alanis</h1></div>   
-                    <div class="card"><h1>Manuel Sebastian Sala Alanis</h1></div>
-                </div>      
+            <div class="reservations">
+                <div class="cards-reservation">
+                    <div class="card" *ngFor="let card of cardsSeleccionadas">
+                      <h1>Mesa: {{card.mesa}}</h1>
+                      <p>Descripción: {{card.descripcion}}</p>
+                    </div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+
+                </div>
             </div>
         </main>
+        <div class="right-aside">
+        </div>
     </div>    
 </body>
 </html>
  
-

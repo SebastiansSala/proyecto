@@ -1,12 +1,24 @@
+a:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+
 .container{
     color: gray;
     height: 100vh;
     display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
     grid-template-areas:
-        'aside header'
-        'aside main';
+        'aside main right'
+        'aside main right'
+        'aside main right';
 }
 .header { 
     background-color: #fafaf9;
@@ -23,8 +35,9 @@
 .grid-container > .logo > img{
     width: 100px;
 }
+
 .aside { 
-    background-color: #084c61;
+    background-color: #52a7c1;
     color: white;
     padding: 2rem;
     grid-area: aside;
@@ -33,8 +46,9 @@
 .aside-nav{
     font-size: 1.2rem;
     margin-top: 3.25rem;
-    display: grid;
+    display: flex;
     gap: 1.5rem;
+    flex-direction: column;
 }
 
 .aside h1{
@@ -43,7 +57,7 @@
 
 .link{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     gap: 20px;
 }
 
@@ -58,14 +72,15 @@
 }
 
 .main { 
-    background-color: #e7e5e4;
+    background-color: #52a7c1;
     grid-area: main;
     padding: 2rem;
     display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: min-content 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 6fr 1fr;
     gap: 2rem;
-    grid-template-areas: 'reservation cliente';
+    grid-template-areas: 
+    'dates' 'reservation' 'footer';
     overflow: auto;
 }
 
@@ -75,7 +90,7 @@
 
 .cards-reservation{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-auto-rows: 250px;
     gap: 2rem;
 }
@@ -92,24 +107,67 @@
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); 
 }
 
-
-.cliente{
-    grid-area: cliente;
+.dates{
+    grid-area: dates;
+    height: 130px;
+    color: black;
 }
 
-.cliente .card{
-    height: 185px;
-    padding: 1.5rem;
+.head-dates{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.cliente h1{
-    font-size: 25px;
+.head-dates button{
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50px;
 }
 
-.cards-cliente{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 250px;
-    overflow: hidden;
-    gap: 2rem;
+.dates-card{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 10px;
+}
+
+.days{
+    display: flex;
+    height: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.day{
+    font-weight: 500;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.date{
+    font-weight: 700;
+}
+
+.right-aside{
+    grid-area: right;
+    background-color: #52a7c1;
+}
+
+.seleccionado {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ff5b3ed3;
+    color: #ffffff;
+    border-radius: 50px;
+    padding-top: 10px;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-bottom: 10px;
+    width: 40px;
+  }
+.days:hover{
+    cursor: pointer;
 }
