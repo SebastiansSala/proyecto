@@ -1,95 +1,89 @@
-a:link {
-    text-decoration: inherit;
-    color: inherit;
-}
-
-a:visited {
-    text-decoration: inherit;
-    color: inherit;
-}
-
-.container{
-    color: gray;
-    height: 100vh;
+.container {  
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-columns: 0.5fr 2.3fr;
+    grid-template-rows: 150px 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
     grid-template-areas:
-        'aside main right'
-        'aside main right'
-        'aside main right';
-}
+      "aside header"
+      "aside main";
+  }
 
-.header { 
-    background-color: #fafaf9;
-    grid-area: header;
-    padding: 1.5rem 3rem;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    z-index: 3;
-}
-.logo { 
-    grid-area: logo;
-    height: 10vh;
-}
-
-.grid-container > .logo > img{
-    width: 100px;
-}
-
-.aside { 
-    background-color: #52a7c1;
-    color: white;
-    padding: 2rem;
+/* <aside> */ 
+  .aside { 
+    background-color: #363740;
+    box-shadow: 0.2em 0 0.2em rgb(0 0 0 / 30%);
     grid-area: aside;
+    width: max(240px, 18%);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.aside-nav{
-    font-size: 1.2rem;
-    margin-top: 3.25rem;
+.aside > h1{
+    margin: 0;
+    padding: 0.5em 0 0.5em 0.5em;
+    top: 0;
+    font-size: 30px;
+}
+
+.dashboard{
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.nav{
     display: flex;
-    gap: 1.5rem;
     flex-direction: column;
 }
 
-.aside h1{
-    font-size: 40px;
+.nav a{
+    position: sticky;
+    padding: 0 0 0.5em 2em;
+    transition: all 0.15s ease-out;
 }
 
-.link{
-    display: flex;
-    align-items: flex-end;
-    gap: 20px;
+a:link{
+    text-decoration: none;
 }
 
-.aside-nav_elem:hover{
-    font-weight: 900;
-    cursor:pointer;
-}
-
-.aside-nav_elem{
+.nav a{
     list-style-type: none;
-    font-size: 25px;
+    color: black;
 }
 
-.main { 
-    background-color: #52a7c1;
-    grid-area: main;
-    padding: 2rem;
+
+.nav a:hover{
+    font-weight: 900;
+    cursor: pointer;
+}
+/* </aside> */ 
+
+  /* <main> */ 
+  
+  .main {  
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 2fr 6fr 1fr;
-    gap: 2rem;
-    grid-template-areas: 
-    'dates' 'reservation' 'footer';
-}
+    background-color: #F7F8FC;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .7fr 1.3fr 1fr;
+    padding: 100px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "dates dates dates"
+      "reservations reservations reservations"
+      "reservations reservations reservations";
+    grid-area: main;
+  }
 
-.reservations{
-    grid-area: reservation;
-    overflow: auto;
+  .reservations{
+    grid-area: reservations;
+    overflow: scroll;
 }
 
 .reservations::-webkit-scrollbar {
-    overflow: hidden;
+    overflow: scroll;
   }
   
 
@@ -109,6 +103,7 @@ a:visited {
     background-color: #fafaf9;
     padding: 2rem;
     border-radius: 0.5rem;  
+    border: 2px solid #dfe0eb;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); 
 }
 
@@ -155,9 +150,57 @@ a:visited {
     font-weight: 700;
 }
 
-.right-aside{
-    grid-area: right;
-    background-color: #52a7c1;
+  /* </main> */ 
+  
+.header { 
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    background-color: gray;
+    box-shadow: 0px 3px 7px -1px rgba(0,0,0,1);
+}
+
+.top-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    height: 50%;
+}
+
+.search-bar{
+    position: relative;
+    width: 35%;
+    height: 45px;
+    background-color: white;
+    border-radius: 50px;
+    left: 110px;
+    top: 25px;
+}
+
+.search-bar input{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    width: 95%;
+    background-color: white;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    left: 15px
+}
+
+.bottom-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    height: 50%;
+}
+
+.button-container{
+    display: flex;
+    gap: 10px; 
+    margin-right: 20px;
 }
 
 .seleccionado {
@@ -173,6 +216,7 @@ a:visited {
     padding-bottom: 10px;
     width: 40px;
   }
+  
 .days:hover{
     cursor: pointer;
 }

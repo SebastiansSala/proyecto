@@ -10,32 +10,30 @@
 </head>
 <body>
     <div class="container">
-        <header class="header"></header>
-        <aside class="aside">
-            <h1><i class="fa fa-dashboard" style="font-size: 65px"></i> Dashboard</h1>
-            <ul class="aside-nav">
-                <li class="aside-nav_elem">
-                    <a class="link" routerLink="/index" routerLinkActive="active">
-                        <span class="material-symbols-outlined" style="font-size: 40px;">home</span>Home
-                    </a>
-                </li>
-                <li class="aside-nav_elem">
-                    <a class="link">
-                        <span class="material-symbols-outlined" style="font-size: 40px;">account_circle</span>Profile
-                    </a>
-                </li>
-                <li class="aside-nav_elem">
-                    <a class="link">
-                        <span class="material-symbols-outlined" style="font-size: 40px;">settings</span>Setings
-                    </a>
-                </li>
-            </ul>
-        </aside>
+        <header class="header">
+            <div class="top-container">
+                <div class="search-bar left">
+                    <label></label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="bottom-container">
+                <div class="info">
+                    
+                </div>
+                <div class="button-container">
+                    <button mat-raised-button>New</button>
+                    <button mat-raised-button>Upload</button>
+                    <button mat-raised-button>Delete</button>
+                </div>
+            </div>
+        </header>
+        <div class="logo"></div>
         <main class="main">
             <div class="dates">
                 <div class="head-dates">
                     <h2>Dia</h2>
-                    <button> {{fechaActual.dia}}/{{fechaActual.mes}}/{{fechaActual.anno}}</button>
+                        <button> {{fechaActual.dia}}/{{fechaActual.mes}}/{{fechaActual.anno}}</button>
                 </div>
                 <div class='dates-card'>
                     <div class="days" *ngFor="let dia of dias" [class.seleccionado]="dia.seleccionado" (click)="seleccionarDia(dia)">
@@ -43,12 +41,12 @@
                         <p class="date">{{dia.numero}}</p>
                     </div>
                 </div>
-            </div>
+            </div> 
             <div class="reservations">
                 <div class="cards-reservation">
                     <div class="card" *ngFor="let card of cardsSeleccionadas">
-                      <h1>Mesa: {{card.mesa}}</h1>
-                      <p>Descripción: {{card.descripcion}}</p>
+                        <h1>Mesa: {{card.mesa}}</h1>
+                        <p>Descripción: {{card.descripcion}}</p>
                     </div>
                     <div class="card"></div>
                     <div class="card"></div>
@@ -57,13 +55,29 @@
                     <div class="card"></div>
                     <div class="card"></div>
                     <div class="card"></div>
-
                 </div>
             </div>
         </main>
-        <div class="right-aside">
-        </div>
-    </div>    
+        <aside class="aside">
+            <h1>
+                <mat-icon class="dashboard">dashboard</mat-icon>
+                <span>Dashboard</span>
+            </h1>
+            <nav class="nav">
+                <a class="link" routerLink="/index" routerLinkActive="active">
+                    <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">home</span>Home
+                </a>
+                <a class="link" routerLink="" routerLinkActive="active">
+                    <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">account_circle</span>Profile
+                </a>
+                <a class="link" routerLink="" routerLinkActive="active">
+                    <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">settings</span>Setings
+                </a>
+            </nav>
+        </aside>
+    </div>
+    
+    
 </body>
 </html>
  
