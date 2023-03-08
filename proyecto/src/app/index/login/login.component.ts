@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {MatDialogRef} from '@angular/material/dialog';
 import { AuthService } from 'src/app/authService/authService.component';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,19 +9,20 @@ import { AuthService } from 'src/app/authService/authService.component';
 })
 
 export class LoginComponent {
-    username?: string;
+    email?: string;
     password?: string;
   
     constructor(
       private dialogRef: MatDialogRef<LoginComponent>,
-      private authService: AuthService
+      private authService: AuthService,
     ) {}
 
     login() {
-        this.authService.login(this.username!, this.password!).subscribe(() => {
+        this.authService.login(this.email!, this.password!).subscribe(() => {
           this.dialogRef.close();
         });
       }
+      hide = true;
 
     cancel() {
       this.dialogRef.close();

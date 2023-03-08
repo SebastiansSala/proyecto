@@ -15,7 +15,6 @@ export class IndexComponent {
 
   openLoginDialog() {
     const dialogRef = this.dialog.open(LoginComponent, {
-      width: '250px'
     });
   }
 }

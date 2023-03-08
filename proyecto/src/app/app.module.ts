@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
-import {MatDialogModule} from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './index/login/login.component';
+import {MaterialExampleModule} from '../material.module';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +22,9 @@ import { LoginComponent } from './index/login/login.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    MatDialogModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

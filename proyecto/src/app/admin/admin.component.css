@@ -8,7 +8,6 @@ a:visited {
     color: inherit;
 }
 
-
 .container{
     color: gray;
     height: 100vh;
@@ -20,6 +19,7 @@ a:visited {
         'aside main right'
         'aside main right';
 }
+
 .header { 
     background-color: #fafaf9;
     grid-area: header;
@@ -81,12 +81,17 @@ a:visited {
     gap: 2rem;
     grid-template-areas: 
     'dates' 'reservation' 'footer';
-    overflow: auto;
 }
 
 .reservations{
     grid-area: reservation;
+    overflow: auto;
 }
+
+.reservations::-webkit-scrollbar {
+    overflow: hidden;
+  }
+  
 
 .cards-reservation{
     display: grid;

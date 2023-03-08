@@ -1,14 +1,34 @@
-<h1>Iniciar sesión</h1>
-<div>
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" [(ngModel)]="username">
-  </div>
-  
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" [(ngModel)]="password">
-  </div>
-<div class="buttons">
-  <button mat-raised-button (click)="login()">Iniciar Sesión</button>
-  <button mat-raised-button (click)="cancel()">Cancelar</button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <form>
+    <h1>Iniciar sesión</h1>
+      <mat-form-field appearance="fill">
+        <mat-label for="username">Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" id="email" name="email" [(ngModel)]="email" required>
+        <button mat-icon-button matSuffix>
+          <mat-icon class="material-icons">email</mat-icon>
+        </button>
+      </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label for="password">Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'"  id="password" name="password" [(ngModel)]="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <p>Forgot Password?</p>
+    <button>LOGIN</button>
+    <p>Don't have account? <a>Signup Now</a></p>
+  </form>  
+</body>
+</html>
