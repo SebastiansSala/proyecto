@@ -9,10 +9,13 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 })
 
 export class IndexComponent {
-
+  email?: string;
+  password?: string;
+  
   constructor(private dialog: MatDialog){
   }
 
+  hide = true;
   openLoginDialog() {
     const dialogRef = this.dialog.open(LoginComponent, {
     });

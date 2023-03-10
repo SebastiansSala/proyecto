@@ -1,42 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <ul>
-                <li><a>Inicio</a></li>
-                <li><a>Menu</a></li>
-                <li><a>Reservaciones</a></li>
-            </ul>
-        </nav>
-        <div class="img-container">
-            <img src="https://marketplace.canva.com/EAFE1LIKOkw/1/0/1600w/canva-logo-para-taquer%C3%ADa-elegante-y-tradicional-vCt4fcsJ8Fs.jpg" alt="logo">
-        </div>
-    </header>
-    <div class="wrapper">
-        <img src="https://laroussecocina.mx/wp-content/uploads/2022/03/040322_COVER.png" alt="photo 1">   
-        <img src="https://assets.unileversolutions.com/recipes-v2/236347.jpg" alt="photo 2">
-        <img src="http://www.byrontalbott.com/wp-content/uploads/2015/08/Screen-Shot-2015-08-25-at-9.05.43-AM.png" alt="ropavieja">     
-        <img src="https://tacos10.com/wp-content/uploads/2019/01/Tacos-de-cabeza-de-res.jpg" alt="cabeza">     
-        <img src="https://cdn.colombia.com/gastronomia/2011/08/26/tacos-de-bistec-de-carne-de-res-3177.jpg" alt="bistec">    
-        <img src="https://cocinamia.com.mx/wp-content/uploads/2021/05/Mesa-de-trabajo-5-copia-2-100-1100x500.jpg" alt="tripa">
+  <div class="container">
+    <div class="header">
+      <nav>
+        <ul>
+          <li><a >Home</a></li>
+          <li><a routerLink="#menu" routerLinkActive="active">Menu</a></li>
+          <li><a routerLink="/reservar" routerLinkActive="active">Reservar</a></li>
+        </ul>
+      </nav>
     </div>
-    <main class="main">
-        <div class="about">
-            <h1>about</h1>
-            <p>narsotenraoteirntoreitnoarsietnnarsotenraoteirntoreitnoarsietnnar
-                sotenraoteirntoreitnoarsietnnarsotenraoteirntoreitnoarsietnnarso
-                tenraoteirntoreitnoarsietnnarsotenraoteirntoreitnoarsietnnarsote
-                nraoteirntoreitnoarsietnnarsotenraoteirntoreitnoarsietnnarsotenr
-                aoteirntoreitnoarsietnnarsotenraoteirntoreitnoarsietn</p>
+    <div class="main">
+      <div class="intro">
+        <div class="intro-flex">
+          <p class="title">
+            TACOS
+          </p>
+          <h3>
+            Restaurant
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+          </p>
+          <button mat-raised-button color="accent">Reserva YA!</button>
         </div>
-        <button mat-raised-button (click)="openLoginDialog()">Iniciar Sesión</button>   
-    </main> 
+      </div>
+      <div class="menu" id="menu">
+        <div class="entradas">
+          <h1>ENTRADAS</h1>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+        </div>
+        <div class="mar">
+          <h1>MAR</h1>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+        </div>
+        <div class="tacos">
+          <h1>TACOS</h1>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+        </div>
+        <div class="postres">
+          <h1>POSTRES</h1>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+        </div>
+      </div>
+    </div>
+    <div class="logo"></div>
+    <div class="border"></div>
+    <div class="border2"></div>
+    <div class="logo2"></div>
+  </div>
 </body>
 </html>

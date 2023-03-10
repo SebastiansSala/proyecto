@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {MatDialogRef} from '@angular/material/dialog';
-import { AuthService } from 'src/app/authService/authService.component';
 
 @Component({
   selector: 'app-login',
@@ -9,19 +8,14 @@ import { AuthService } from 'src/app/authService/authService.component';
 })
 
 export class LoginComponent {
+
+
     email?: string;
     password?: string;
   
     constructor(
       private dialogRef: MatDialogRef<LoginComponent>,
-      private authService: AuthService,
     ) {}
-
-    login() {
-        this.authService.login(this.email!, this.password!).subscribe(() => {
-          this.dialogRef.close();
-        });
-      }
       hide = true;
 
     cancel() {

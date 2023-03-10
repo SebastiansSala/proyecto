@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { AdminComponent } from './admin/admin.component';
+import { ReservacionesComponent } from './index/reservaciones/reservaciones.component';
+
 const routes: Routes = [
   {path: '', redirectTo: 'admin', pathMatch: 'full'},
   {path: 'index', component: IndexComponent},
-  {path: 'admin', component: AdminComponent}
+  {path: 'admin', component: AdminComponent},
+  {path: 'reservaciones', component: ReservacionesComponent}
 ];
 
 @NgModule({

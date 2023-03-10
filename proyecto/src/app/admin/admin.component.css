@@ -1,4 +1,4 @@
-.container {  
+.container {
     display: grid;
     grid-template-columns: 0.5fr 2.3fr;
     grid-template-rows: 150px 1fr;
@@ -8,18 +8,37 @@
     grid-template-areas:
       "aside header"
       "aside main";
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "aside"
+        "main";
+    }
+}
+  
+
+  .logo{
+    background-color: #F44336;
+    color: white;
   }
 
 /* <aside> */ 
   .aside { 
-    background-color: #363740;
+    background-color: #1F2837;
     box-shadow: 0.2em 0 0.2em rgb(0 0 0 / 30%);
     grid-area: aside;
     width: max(240px, 18%);
     height: 100%;
     position: fixed;
+    overflow: hidden;
     top: 0;
     left: 0;
+    overflow-x: scroll;
 }
 
 .aside > h1{
@@ -41,23 +60,25 @@
 
 .nav a{
     position: sticky;
-    padding: 0 0 0.5em 2em;
-    transition: all 0.15s ease-out;
+    display: flex;
+    list-style-type: none;
+    color: #767B85;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.nav span{
+    align-self: center;
 }
 
 a:link{
     text-decoration: none;
 }
 
-.nav a{
-    list-style-type: none;
-    color: black;
-}
-
-
 .nav a:hover{
     font-weight: 900;
     cursor: pointer;
+    background-color: #233342;
 }
 /* </aside> */ 
 
@@ -65,8 +86,8 @@ a:link{
   
   .main {  
     display: grid;
-    background-color: #F7F8FC;
-    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #E0E8F5;
+    grid-template-columns: 1fr;
     grid-template-rows: .7fr 1.3fr 1fr;
     padding: 100px;
     grid-auto-flow: row;
@@ -101,6 +122,7 @@ a:link{
 
 .card{
     background-color: #fafaf9;
+    z-index: 7;
     padding: 2rem;
     border-radius: 0.5rem;  
     border: 2px solid #dfe0eb;
@@ -109,16 +131,15 @@ a:link{
 
 .dates{
     grid-area: dates;
-    height: 130px;
+    height: 150px;
     color: black;
+    border: 2px solid #dfe0eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.head-dates{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 
 .head-dates button{
     padding-left: 30px;
@@ -153,17 +174,17 @@ a:link{
   /* </main> */ 
   
 .header { 
+    z-index: 9;
     grid-area: header;
     position: sticky;
     top: 0;
-    background-color: gray;
+    background-color: #FFFFFF;
     box-shadow: 0px 3px 7px -1px rgba(0,0,0,1);
 }
 
 .top-container{
     display: flex;
     justify-content: space-between;
-    background-color: red;
     height: 50%;
 }
 
@@ -179,21 +200,22 @@ a:link{
 
 .search-bar input{
     outline: none;
-    border: none;
     font-size: 20px;
     width: 95%;
     background-color: white;
     height: 25px;
     position: absolute;
+    border: 1px solid black;
+    border-radius: 1ch;
     top: 10px;
-    left: 15px
+    left: 15px;
+    padding: 10px;
 }
 
 .bottom-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: green;
     height: 50%;
 }
 

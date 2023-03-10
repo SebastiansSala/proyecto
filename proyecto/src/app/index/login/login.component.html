@@ -27,8 +27,8 @@
     </mat-form-field>
 
     <p>Forgot Password?</p>
-    <button>LOGIN</button>
-    <p>Don't have account? <a>Signup Now</a></p>
+    <button (click)="cancel()" routerLink="/reservaciones" routerLinkActive="active" >LOGIN</button>
+    <p>Don't have account? <a routerLink="/signup" routerLinkActve="">Signup Now</a></p>
   </form>  
 </body>
 </html>

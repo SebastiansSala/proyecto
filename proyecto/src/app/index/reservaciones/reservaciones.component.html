@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+    <header class="header">
+        <nav class="nav">
+            <ul>
+                <li></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="main-container">
+            <img src='http://www.fdr.mx/wp-content/uploads/2018/08/WhatsApp-Image-2018-08-14-at-12.26.44-PM-2.jpeg' alt="restaurante" class="restaurante">
+            <div class="info-container">
+            <div class='options-container'>
+                <nav>
+                    <ul>
+                        <li>Resumen</li>
+                        <li>Fotos</li>
+                        <li>Menu</li>
+                        <li>Resenas</li>
+                    </ul>
+                </nav>
+                <div class="resumen">
+
+                </div>
+                <div class="fotos">
+
+                </div>
+                <div class="menu">
+
+                </div>
+                <div class="comentarios">
+
+                </div>
+            </div>
+            <div class="reservations">
+                <form>
+                    <h1>Haz una Reservacion</h1>
+                    <mat-form-field appearance="fill">
+                      <mat-label>Numero de personas</mat-label>
+                      <mat-select [(ngModel)]='selectedValue' name="persona">
+                        <mat-option *ngFor="let persona of personas" [value]="persona.value">
+                          {{persona.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                </form>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer class="footer">
+
+    </footer>
+</div>
+</body>
+</html>

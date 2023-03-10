@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <form>
+                <h1>Crear Cuenta</h1>
+                <div class="inputs">
+                  <mat-form-field appearance="fill">
+                    <mat-label for="username">Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" id="email" name="email" [(ngModel)]="email" required>
+                    <button mat-icon-button matSuffix>
+                      <mat-icon class="material-icons">email</mat-icon>
+                    </button>
+                  </mat-form-field>
+                <mat-form-field appearance="fill">
+                  <mat-label for="password">Enter your password</mat-label>
+                  <input matInput [type]="hide ? 'password' : 'text'"  id="password" name="password" [(ngModel)]="password">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+                </div>
+                <div class="puesto-container">
+                  <div class="textbox">
+                    <p>Escoge tu puesto</p>
+                  </div>
+                  <div class="btn-group">
+                    <label>
+                      <input type="radio" name="admin" autocomplete="off" checked requierd>Client
+                    </label>
+                    <label>
+                      <input type="radio" name="admin" autocomplete="off" checked requierd>Admin
+                    </label>
+                  </div> 
+                  <div class="submit">
+                    <button mat-raised-button>Basic</button>
+                  </div>
+                </div>  
+              </form>  
+         </div>
+    </div> 
+</body>
+</html>

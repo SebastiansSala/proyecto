@@ -8,7 +8,8 @@ import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './index/login/login.component';
-import {MaterialExampleModule} from '../material.module';
+import { MaterialExampleModule } from 'src/material.module';
+import { ReservacionesComponent } from './index/reservaciones/reservaciones.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {MaterialExampleModule} from '../material.module';
     AppComponent,
     IndexComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    ReservacionesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,75 @@
+
+.wrapper{
+    display: flex;
+    margin: 0 auto;
+    max-width: 100rem;
+}
+
+.header{
+    background-color: red;
+    height: 100px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: #fefefe;
+}
+
+.main-container{    
+    margin: auto;
+    width: 75%;
+    height: 800px;
+    background-color: blue;
+}
+
+.restaurante{
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+}
+
+.options-container{
+    display: flex;
+    width: 50%;
+    background-color: green;
+    height: 300px;
+}
+
+.options-container nav{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    padding-left: 35px;
+    border-bottom: 1px solid black;
+}
+
+
+.options-container ul{
+    display: flex;
+    gap: 30px;
+}
+
+.reservations{
+    display: flex;
+    width: 20%;
+    height: 300px;
+    background-color: aqua;
+}
+
+
+form h1{
+    text-align: center;
+}
