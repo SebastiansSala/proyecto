@@ -1,3 +1,7 @@
+body{
+    background-color: #F7F7F7;
+    width: 100%;
+}
 
 .wrapper{
     display: flex;
@@ -5,10 +9,6 @@
     max-width: 100rem;
 }
 
-.header{
-    background-color: red;
-    height: 100px;
-}
 
 li{
     list-style-type: none;
@@ -16,15 +16,13 @@ li{
 
 .main{
     width: 100%;
-    height: 100vh;
-    background-color: #fefefe;
 }
 
 .main-container{    
     margin: auto;
     width: 75%;
-    height: 800px;
-    background-color: blue;
+    margin-top: 40px;
+    background-color: #FFFFFF;
 }
 
 .restaurante{
@@ -35,6 +33,8 @@ li{
 
 .info-container{
     display: flex;
+    position: relative;
+    top: -54px;
     width: 100%;
     justify-content: center;
     gap: 30px;
@@ -42,18 +42,19 @@ li{
 
 .options-container{
     display: flex;
-    width: 50%;
-    background-color: green;
-    height: 300px;
+    width: 53%;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .options-container nav{
     display: flex;
     align-items: center;
+    position: sticky;
     height: 50px;
     width: 100%;
     padding-left: 35px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #D8D9DB;
 }
 
 
@@ -61,6 +62,82 @@ li{
     display: flex;
     gap: 30px;
 }
+
+.options-container li{
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.options-container li:hover{
+    color: red;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid red;
+}
+
+.title{
+    font-size: 50px;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #D8D9DB;
+}
+
+.etiquetas-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 130px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.subtitle{
+    margin-top: 28px; 
+    margin-left: 18px; 
+    font-size: 30px;
+}
+
+.etiquetas{
+    width: 20%;
+    height: 100px;
+    border-radius: 2ch;
+    border: 1px solid #D8D9DB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumen{
+    padding: 20px;
+    border-bottom: 1px solid #D8D9DB;
+}
+
+.fotos{
+    display: flex;
+    padding: 30px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    border-bottom: 1px solid #D8D9DB;
+}
+
+.fotos-1 img{
+    width: 300px;
+    height: 300px;
+}
+
+.fotos-2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+.fotos-2 img{
+    width: 150px;
+    height: 150px;
+    object-fit: fill;
+}
+
+
 
 .reservations{
     display: flex;
@@ -72,4 +149,60 @@ li{
 
 form h1{
     text-align: center;
+}
+
+.menu{
+    padding: 30px;
+    border-bottom: 1px solid #D8D9DB;
+}
+
+.menu a{
+    color: red;
+    margin-left: 30px;
+}
+
+.menu p{
+    margin-left: 15px;
+    font-size: 2rem;
+}
+
+.menu a:hover{
+    cursor: pointer;
+}
+
+.comment-flex{
+    display: flex;
+    height: 200px;
+    padding: 5px 50px;
+    border-bottom: 1px solid #D8D9DB;
+}
+
+.profile{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    gap: 5px;
+}
+
+.comments{  
+    height: 100%;
+    width: 80%;
+    order: 2;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.img-profile{
+    width: 70px;
+    background-color: rosybrown;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.name{
+    font-size: 18px;
 }

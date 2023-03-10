@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 interface Persona {
   value: number;
@@ -12,16 +13,34 @@ interface Persona {
 })
 
 export class ReservacionesComponent {
-  selectedValue = 0;
+  horarios: any[] = [];
+  horarioSeleccionado = '';
+  numPersonas: number[] = [1, 2, 3, 4, 5];;
 
-  constructor(){
+  constructor(private http: HttpClient){
   }
 
-  personas: Persona[]= [
-    {value: 1, viewValue: '1 persona'},
-    {value: 2, viewValue: '2 personas'},
-    {value: 3, viewValue: '3 personas'},
-    {value: 4, viewValue: '4 personas'}
-  ]
+  enviarHorario(event: any) {
+    event.preventDefault();
+    
+    const reserva = {
+      horario: this.horarioSeleccionado,
+      numPersonas: this.numPersonas
+    };
+
+    this.http.post('/api/reservas', reserva).subscribe((data: any) => {
+      console.log(data);
+      alert('Reserva realizada con éxito');
+    }, error => {
+      console.error(error);
+      alert('Error al hacer la reserva');
+    });
+  }
+
+  ngOnInit() {
+    this.http.get('/api/horarios').subscribe((data: any) => {
+      this.horarios = data;
+    });
+  }
 
 }
