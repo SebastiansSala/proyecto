@@ -55,6 +55,8 @@ li{
     width: 100%;
     padding-left: 35px;
     border-bottom: 1px solid #D8D9DB;
+    top: 0;
+    background-color: #FFFFFF;
 }
 
 
@@ -68,10 +70,10 @@ li{
 }
 
 .options-container li:hover{
-    color: red;
+    color: #B8222D;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid #B8222D;
 }
 
 .title{
@@ -143,7 +145,8 @@ li{
     display: flex;
     width: 20%;
     height: 300px;
-    background-color: aqua;
+    position: sticky;
+    top:0;
 }
 
 
@@ -157,7 +160,7 @@ form h1{
 }
 
 .menu a{
-    color: red;
+    color: #B8222D;
     margin-left: 30px;
 }
 
@@ -205,4 +208,37 @@ form h1{
 
 .name{
     font-size: 18px;
+}
+
+label{
+    margin-bottom: 10px;
+}
+
+.select{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+button{
+    margin-top: 11px;
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    background-color: #B8222D;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: #B8222D;
+}
+
+button:hover{
+    cursor: pointer;
 }

@@ -28,6 +28,7 @@ export class ReservacionesComponent {
       numPersonas: this.numPersonas
     };
 
+
     this.http.post('/api/reservas', reserva).subscribe((data: any) => {
       console.log(data);
       alert('Reserva realizada con éxito');

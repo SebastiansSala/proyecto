@@ -7,7 +7,7 @@
   <title>Document</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -16,7 +16,8 @@
         <ul>
           <li><a >Home</a></li>
           <li><a routerLink="#menu" routerLinkActive="active">Menu</a></li>
-          <li><a routerLink="/reservar" routerLinkActive="active">Reservar</a></li>
+          <li><a routerLink="#menu" routerLinkActive="active">Location</a></li>
+          <li><a routerLink="#menu" routerLinkActive="active">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -34,70 +35,34 @@
             Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
           </p>
-          <button mat-raised-button style="background-color: #c9ab81;">Reserva YA!</button>
+          <button mat-raised-button style="background-color: #c9ab81;" (click)=" openLoginDialog()">Reserva YA!</button>
         </div>
       </div>
       <div class="menu" id="menu">
         <div class="entradas">
-          <h1>ENTRADAS</h1>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+            <div class="entradas-container">
+              <h3 class="foodtitle">Jamburguer</h3>
+              <h4 class="foodPrice">$300</h4>
+              <p class="foodDesc">Great american foodarstart
+                arstartsartarstearsntar
+                arstarosierte
+              </p>
+            </div>
         </div>
-        <div class="mar">
-          <h1>MAR</h1>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+        <div class="entradas">
+          <div class="entradas-container">
+            <h3 class="foodtitle">Jamburguer</h3>
+            <h4 class="foodPrice">$300</h4>
+            <p class="foodDesc">Great american food</p>
+          </div>
+      </div>
+      <div class="entradas">
+        <div class="entradas-container">
+          <h3 class="foodtitle">Jamburguer</h3>
+          <h4 class="foodPrice">$300</h4>
+          <p class="foodDesc">Great american food</p>
         </div>
-        <div class="tacos">
-          <h1>TACOS</h1>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-        </div>
-        <div class="postres">
-          <h1>POSTRES</h1>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-        </div>
+    </div>
       </div>
     </div>
     <div class="logo"></div>
