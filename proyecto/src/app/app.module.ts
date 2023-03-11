@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './index/login/login.component';
 import { MaterialExampleModule } from 'src/material.module';
 import { ReservacionesComponent } from './index/reservaciones/reservaciones.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddComponent } from './add/add.component';
+import { UploadComponent } from './upload/upload.component';
 
 
 @NgModule({
@@ -18,7 +21,9 @@ import { ReservacionesComponent } from './index/reservaciones/reservaciones.comp
     IndexComponent,
     AdminComponent,
     LoginComponent,
-    ReservacionesComponent
+    ReservacionesComponent,
+    AddComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,8 @@ import { ReservacionesComponent } from './index/reservaciones/reservaciones.comp
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialExampleModule
+    MaterialExampleModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

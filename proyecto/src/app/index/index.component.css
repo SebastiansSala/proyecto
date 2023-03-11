@@ -84,6 +84,7 @@
    justify-content: center;
    align-items: center;
    background-repeat: none;
+   color: #EAE2B7;
   }
 
   .intro-flex{
@@ -97,15 +98,11 @@
   }
 
   .title{
-    font-size: 100px;
+    font-size: 250px;
   }
 
   .intro-flex h3{
     font-size: 40px;
-  }
-
-  .intro-flex p{
-    color: white;
   }
 
   .intro-flex button{
@@ -121,28 +118,89 @@
   display: flex;
   justify-content: center;
 }
+
+.menuwrapper{
+  background-image: 
+  linear-gradient(
+      rgba(25, 209, 231, 0.5),
+      rgba(243, 17, 224, 0.5)
+    ),
+  url("https://i.pinimg.com/474x/30/8f/51/308f519fcd2689523b81312ef9dd1422.jpg");
+  height: 700px;
+}
+
+.menutitles{
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+  padding-top: 50px;
+  font-size: 60px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.title-flex{
+  display: flex;
+  gap: 20px;
+}
+
+.title-flex li{
+  position: relative;
+  list-style-type: none;
+  font-size: 30px;
+  transition: all 0.3s ease-in-out;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.title-flex li:hover{
+  cursor: pointer;
+  color:rgb(255, 255, 255);
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  background-position: 0;
+}
+
+ 
+ .title-flex a:hover::before{
+   width: 100%;
+ }
+
+.title-flex li:before{
+  content: '';
+  background: #c9ab81;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
 .menu { 
-  border-top: 1px solid #c9ab81;
-  background-color: #fcbf49;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
   flex: 1;
-  height: 100vh;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org…0 0-57.97 0h57.96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  height: 60%;
 }
 
 .entradas{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
+    width: 13rem;
+    gap: 10px;
 }
 
 .entradas-container{
     width: 12rem;
     padding: 0.2rem 0.5rem;
-    margin-bottom: 0.5rem;
     background: #eae2b7;
     border: 0.1rem solid #1f1e34;
     border-radius: 0.3rem;
@@ -162,13 +220,17 @@
 .foodDesc{
   grid-area: 2 / 1 / 3 / 3;
   text-align: start;
+  color: #F59223;
 }
 
 .foodPrice{
+  color: #D6314D;
   text-align: end;
 }
+
 .foodTitle{
   text-align: start;
+  color: #003049;
 }
 
 .menu h1{
@@ -189,13 +251,6 @@
 
 a{
   text-decoration: none;
-}
-
-.menu p{
-  letter-spacing: 5px;
-  margin-top: 10px;
-  margin-left: 50px;
-  color: white;
 }
 
 .mar{

@@ -22,22 +22,29 @@
                     
                 </div>
                 <div class="button-container">
-                    <button mat-raised-button>New</button>
+                    <button mat-raised-button (click)="add()">New</button>
                     <button mat-raised-button>Upload</button>
-                    <button mat-raised-button>Delete</button>
                 </div>
             </div>
         </header>
         <main class="main">
+            <div class="graph">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div >
+                
+            </div>
             <div class="reservations">
-                <div class="cards-reservation">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+                <div class="card" *ngFor="let reservation of reservations">
+                    <p>Name: {{ reservation.name }}</p>
+                    <p>Guests: {{ reservation.guests }} </p>
+                    <p>Time: {{ reservation.time }}</p>
+                    <button mat-icon-button color="warn" (click)="removeReservation(reservation)">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                      <button mat-icon-button color="primary" (click)="editReservation(reservation)">
+                        <mat-icon>edit</mat-icon>
+                      </button>
                 </div>
             </div>
         </main>
@@ -51,19 +58,21 @@
                     <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">home</span>
                     <span>Home</span>
                 </a>
-                <a class="link" routerLink="" routerLinkActive="active">
+                <a class="link" routerLink="/reservaciones" routerLinkActive="active">
                     <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">account_circle</span>
-                    <span>Profile</span>
+                    <span>Reservar</span>
                 </a>
                 <a class="link" routerLink="" routerLinkActive="active">
                     <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">settings</span>
                     <span>Settings</span>
                 </a>
+                <a class="link self" routerLink="" routerLinkActive="active">
+                    <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">account_circle</span>
+                    <span>Profile</span>
+                </a>
             </nav>
         </aside>
-    </div>
-    
-    
+    </div> 
 </body>
 </html>
  

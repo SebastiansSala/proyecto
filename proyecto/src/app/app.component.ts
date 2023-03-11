@@ -14,7 +14,6 @@ async function addHorariosDefault() {
   try {
     const horarios = [
       {
-
         horaInicio: "19:00",
         horaFin: "20:00"
       },
