@@ -8,13 +8,6 @@
 </head>
 <body>
     <div class="wrapper">
-    <header class="header">
-        <nav class="nav">
-            <ul>
-                <li></li>
-            </ul>
-        </nav>
-    </header>
     <main class="main">
         <div class="main-container">
             <img src='http://www.fdr.mx/wp-content/uploads/2018/08/WhatsApp-Image-2018-08-14-at-12.26.44-PM-2.jpeg' alt="restaurante" class="restaurante">
@@ -22,13 +15,13 @@
             <mat-card class='options-container'>
                 <nav>
                     <ul>
-                        <li><a routerLink="./" fragment="resumen">Resumen</a></li>
-                        <li><a routerLink="./" fragment="fotos">Fotos</a></li>
-                        <li><a routerLink="./" fragment="menu">Menu</a></li>
-                        <li><a routerLink="./" fragment="comentarios">Comentarios</a></li>
+                        <li><a href="reservaciones#resumen">Resumen</a></li>
+                        <li><a href="/reservaciones#fotos">Fotos</a></li>
+                        <li><a href="/reservaciones#menu" >Menu</a></li>
+                        <li><a href="/reservaciones#comentarios" >Comentarios</a></li>
                     </ul>
                 </nav>
-                <div class="title">
+                <div class="title" id="resumen">
                     <p>EL TAQUITO</p>
                 </div>
                 <p class="subtitle">RESUMEN</p>
@@ -47,13 +40,13 @@
                     </div>
                 </div>
                 <div class="resumen">
-                    <p id="resumen">
+                    <p>
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
                         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
                         Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
                     </p>
                 </div>
-                <p class="subtitle">FOTOS</p>
+                <p class="subtitle" id="fotos">FOTOS</p>
                 <div class="fotos">
                     <div class="fotos-1">
                         <img src="https://mabhostelero.com/wp-content/uploads/2019/03/restaurant-3597677_1280.jpg" alt="lugar">
@@ -104,16 +97,16 @@
             </mat-card>
             <div class="reservations">
                 <mat-card style="padding: 10px; position: sticky;">
-                <form  (submit)="enviarHorario($event)">
+                <form >
                     <mat-card-header style="border-bottom: 1px solid #D8D9DB; margin-bottom: 10px; padding-bottom: 10px">
                         <h1>Haz una Reservacion</h1>
                     </mat-card-header>
                     <mat-card-content>
                         <label for="horario">
                             Seleccionar horario:
-                            <select name="horario" [(ngModel)]="horarioSeleccionado" class="select">
-                                <option *ngFor="let horario of horarios" [value]="horario._id">
-                                    {{ horario.hora }}
+                            <select name="horario"class="select">
+                                <option>
+                                    
                                 </option>
                             </select>
                           </label>

@@ -1,78 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>admin</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
+
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="top-container">
-                <div class="search-bar left">
-                    <label></label>
-                    <input type="text">
+    <header class="header">
+        <h1 class="logo">
+            <mat-icon class="dashboard">dashboard</mat-icon>
+            <span>Dashboard</span>
+        </h1>
+        <div class="bottom-container">
+            <div class="info">
+                <img src="https://ilyaeru.github.io/TOP-Project-Admin-Dashboard/img/shiba-inu-.jpg">
+                <div>
+                    <p>Hi there</p>
+                    <h1>Sebastian Sala</h1>
                 </div>
             </div>
-            <div class="bottom-container">
-                <div class="info">
-                    
-                </div>
-                <div class="button-container">
-                    <button mat-raised-button (click)="add()">New</button>
-                    <button mat-raised-button>Upload</button>
-                </div>
+            <div class="button-container">
+                <button mat-raised-button (click)="add()">New</button>
+                <button mat-raised-button (click)="add()">hola</button> 
             </div>
-        </header>
-        <main class="main">
+        </div>
+    </header>
+    <aside class="aside">
+        <nav class="nav">
+            <a class="link" routerLink="/index" routerLinkActive="active">
+                <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em">home</span>
+                <span>Home</span>
+            </a>
+            <a class="link" routerLink="/reservaciones" routerLinkActive="active">
+                <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em">account_circle</span>
+                <span>Reservar</span>
+            </a>
+            <a class="link" routerLink="" routerLinkActive="active">
+                <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em">settings</span>
+                <span>Settings</span>
+            </a>
+            <a class="link self" routerLink="" routerLinkActive="active">
+                <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em">account_circle</span>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </aside>
+    <main class="main">
+        <div class="graphs-container">
             <div class="graph">
                 <canvas id="myChart"></canvas>
             </div>
-            <div >
-                
+        </div>
+        <div class="reservations">
+            <div class="card" *ngFor="let reservation of reservations">
+                <p>Name: {{ reservation.name }}</p>
+                <p>Guests: {{ reservation.guests }}</p>
+                <p>Time: {{ reservation.time }}</p>
+                <button mat-icon-button color="warn" (click)="removeReservation(reservation)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" (click)="editReservation(reservation)">
+                    <mat-icon>edit</mat-icon>
+                </button>
             </div>
-            <div class="reservations">
-                <div class="card" *ngFor="let reservation of reservations">
-                    <p>Name: {{ reservation.name }}</p>
-                    <p>Guests: {{ reservation.guests }} </p>
-                    <p>Time: {{ reservation.time }}</p>
-                    <button mat-icon-button color="warn" (click)="removeReservation(reservation)">
-                        <mat-icon>delete</mat-icon>
-                      </button>
-                      <button mat-icon-button color="primary" (click)="editReservation(reservation)">
-                        <mat-icon>edit</mat-icon>
-                      </button>
-                </div>
-            </div>
-        </main>
-        <aside class="aside">
-            <h1 class="logo">
-                <mat-icon class="dashboard">dashboard</mat-icon>
-                <span>Dashboard</span>
-            </h1>
-            <nav class="nav">
-                <a class="link" routerLink="/index" routerLinkActive="active">
-                    <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">home</span>
-                    <span>Home</span>
-                </a>
-                <a class="link" routerLink="/reservaciones" routerLinkActive="active">
-                    <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">account_circle</span>
-                    <span>Reservar</span>
-                </a>
-                <a class="link" routerLink="" routerLinkActive="active">
-                    <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">settings</span>
-                    <span>Settings</span>
-                </a>
-                <a class="link self" routerLink="" routerLinkActive="active">
-                    <span class="material-symbols-outlined" style="font-size: 40px; margin-right: 1em;">account_circle</span>
-                    <span>Profile</span>
-                </a>
-            </nav>
-        </aside>
-    </div> 
+        </div>
+    </main>
 </body>
+
 </html>
- 

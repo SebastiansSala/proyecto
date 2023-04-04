@@ -1,6 +1,8 @@
 body{
+    display: flex;
     background-color: #F7F7F7;
     width: 100%;
+    height: auto;
 }
 
 .wrapper{
@@ -8,7 +10,6 @@ body{
     margin: 0 auto;
     max-width: 100rem;
 }
-
 
 li{
     list-style-type: none;

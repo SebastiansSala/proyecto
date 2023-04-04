@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HorarioModel } from 'server/models/horario';
 
 @Component({
   selector: 'app-root',
@@ -26,12 +25,7 @@ async function addHorariosDefault() {
         horaFin: "22:00"
       }, 
     ];
-
-    for (const horario of horarios) {
-      const nuevoHorario = new HorarioModel(horario);
-      await nuevoHorario.save();
-    }
-
+    
     console.log("Horarios por defecto añadidos correctamente");
   } catch (error) {
     console.error(error);

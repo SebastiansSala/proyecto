@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginComponent } from './login/login.component';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-index',
@@ -17,7 +17,7 @@ export class IndexComponent {
 
   hide = true;
   openLoginDialog() {
-    const dialogRef = this.dialog.open(LoginComponent, {
+    this.dialog.open(LoginComponent, {
     });
   }
 }

@@ -20,28 +20,5 @@ export class ReservacionesComponent {
   constructor(private http: HttpClient){
   }
 
-  enviarHorario(event: any) {
-    event.preventDefault();
-    
-    const reserva = {
-      horario: this.horarioSeleccionado,
-      numPersonas: this.numPersonas
-    };
-
-
-    this.http.post('/api/reservas', reserva).subscribe((data: any) => {
-      console.log(data);
-      alert('Reserva realizada con éxito');
-    }, error => {
-      console.error(error);
-      alert('Error al hacer la reserva');
-    });
-  }
-
-  ngOnInit() {
-    this.http.get('/api/horarios').subscribe((data: any) => {
-      this.horarios = data;
-    });
-  }
 
 }
